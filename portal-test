@@ -1,0 +1,15 @@
+var myClass = function() {
+
+    this.myMethod = function() {
+        // do something
+    };
+   
+};
+
+myClass.prototype = {
+
+    myOtherMethod: function() {
+        // do something else
+    }
+
+}
