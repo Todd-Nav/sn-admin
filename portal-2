@@ -1,0 +1,67 @@
+
+   var parsed = new XMLHelper().toObject(responseBody);
+   //Create a new import set
+   var crImpSet = new GlideRecord('sys_import_set');
+   crImpSet.initialize();
+   crImpSet.mode = 'synchronous';
+   //crImpSet.mode = 'asynchronous'; //switch to this for testing import set will not trigger transform map
+   crImpSet.table_name = 'u_location_api_import'; //Set the extended importset table
+   crImpSet.state = 'loading';
+   crImpSet.insert();
+   var locs = parsed.Location;
+   var restGR = new GlideRecord('u_location_api_import'); //Query extended import set rows table
+   //Loop through the xml chunks until 0 remain creating import set rows to be transformed
+   for (var i = 0; i < locs.length; i++) {
+   restGR.initialize();
+   restGR.u_id = locs[i].ID;
+   if (locs[i].AlternateIdentifier) {
+   restGR.u_opendate = locs[i].AlternateIdentifier.ID;
+   }
+   restGR.u_name = locs[i].Name;
+   restGR.u_typedescription = locs[i].TypeDescription;
+   if (locs[i].Address) {
+   restGR.u_latitude = locs[i].Address.Latitude;
+   }
+   if (locs[i].Address) {
+   restGR.u_subdivision = locs[i].Address.Subdivision;
+   }
+   restGR.u_typecode = locs[i].TypeCode;
+   if (locs[i].Address) {
+   restGR.u_countryname = locs[i].Address.CountryName;
+   }
+   if (locs[i].Address) {
+   restGR.u_addressline1 = locs[i].Address.AddressLine1;
+   }
+   if (locs[i].Address) {
+   restGR.u_postalcode = locs[i].Address.PostalCode;
+   }
+   if (locs[i].Address) {
+   restGR.u_formattedaddress = locs[i].Address.FormattedAddress;
+   }
+   if (locs[i].Address) {
+   restGR.u_city = locs[i].Address.City;
+   }
+   if (locs[i].Address) {
+   restGR.u_longitude = locs[i].Address.Longitude;
+   }
+   if (locs[i].TelephoneNumber) {
+   restGR.u_phonenumber = locs[i].TelephoneNumber.PhoneNumber;
+   }
+   restGR.u_county = locs[i].Address.County;
+   if (locs[i].TimeZone) {
+   restGR.u_timezonecode = locs[i].TimeZone.TimeZoneCode;
+   }
+   restGR.u_address = locs[i].Address.FormattedAddress;
+   if (locs[i].LocationMilestones) {
+   restGR.u_opendate = locs[i].LocationMilestones.OpenDate;
+   }
+   if (locs[i].CompanyCodeDescriptor) {
+   restGR.u_company_code = locs[i].CompanyCodeDescriptor.ID;
+   }
+   restGR.u_subtypecode = locs[i].SubTypeCode;
+   restGR.sys_import_set = crImpSet.sys_id; //This is the sys_id from import set above
+   restGR.insert();
+   }
+}catch(ex) {
+   var message = ex.getMessage();
+}
