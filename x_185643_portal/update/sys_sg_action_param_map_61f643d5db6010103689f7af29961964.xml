@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_action_param_map">
+    <sys_sg_action_param_map action="INSERT_OR_UPDATE">
+        <button display_value="New Button (Incident)">2df643d5db6010103689f7af2996195c</button>
+        <item_parameter display_value="Incident short_description">edf643d5db6010103689f7af29961957</item_parameter>
+        <sys_class_name>sys_sg_action_param_map</sys_class_name>
+        <sys_created_by>todd.sadowski@navistar.com</sys_created_by>
+        <sys_created_on>2020-05-02 15:22:41</sys_created_on>
+        <sys_id>61f643d5db6010103689f7af29961964</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>edf643d5db6010103689f7af29961957</sys_name>
+        <sys_package display_value="Portal" source="x_185643_portal">40160bd9db2010103689f7af299619e4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Portal">40160bd9db2010103689f7af299619e4</sys_scope>
+        <sys_update_name>sys_sg_action_param_map_61f643d5db6010103689f7af29961964</sys_update_name>
+        <sys_updated_by>todd.sadowski@navistar.com</sys_updated_by>
+        <sys_updated_on>2020-05-02 15:22:41</sys_updated_on>
+        <ui_parameter display_value="Short description">69f643d5db6010103689f7af2996195f</ui_parameter>
+    </sys_sg_action_param_map>
+</record_update>

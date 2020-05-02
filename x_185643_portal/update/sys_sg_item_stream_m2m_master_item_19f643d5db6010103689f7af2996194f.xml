@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_item_stream_m2m_master_item">
+    <sys_sg_item_stream_m2m_master_item action="INSERT_OR_UPDATE">
+        <item_stream display_value="Incident Item Stream">11f643d5db6010103689f7af2996194d</item_stream>
+        <master_item display_value="Incident master_item">59f643d5db6010103689f7af2996194e</master_item>
+        <sys_class_name>sys_sg_item_stream_m2m_master_item</sys_class_name>
+        <sys_created_by>todd.sadowski@navistar.com</sys_created_by>
+        <sys_created_on>2020-05-02 15:22:41</sys_created_on>
+        <sys_id>19f643d5db6010103689f7af2996194f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Portal" source="x_185643_portal">40160bd9db2010103689f7af299619e4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Portal">40160bd9db2010103689f7af299619e4</sys_scope>
+        <sys_update_name>sys_sg_item_stream_m2m_master_item_19f643d5db6010103689f7af2996194f</sys_update_name>
+        <sys_updated_by>todd.sadowski@navistar.com</sys_updated_by>
+        <sys_updated_on>2020-05-02 15:22:41</sys_updated_on>
+    </sys_sg_item_stream_m2m_master_item>
+</record_update>
